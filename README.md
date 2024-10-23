@@ -21,13 +21,13 @@ wget https://files.auspatious.com/coastlines/data/tide_models_vn_ph_2022.zip \
 Finally, set up a custom Python environment  for the workshop.
 
 ```bash
-MYENV=coastalapps 
-python -m venv ~/venvs/$MYENV
-realpath /env/lib/python3.10/site-packages > ~/venvs/$MYENV/lib/python3.10/site-packages/base_venv.pth
-source ~/venvs/$MYENV/bin/activate
-cd coastal-applications-workshop
-pip install -r requirements.txt
-python -m ipykernel install --user --name=$MYENV --display-name "Coastal Workshop"
+MYENV=coastalapps \
+python -m venv ~/venvs/$MYENV \
+realpath /env/lib/python3.10/site-packages > ~/venvs/$MYENV/lib/python3.10/site-packages/base_venv.pth \
+source ~/venvs/$MYENV/bin/activate \
+cd coastal-applications-workshop \
+pip install -r requirements.txt \
+python -m ipykernel install --user --name=$MYENV --display-name "Coastal Workshop" 
 ```
 
 Now when you run a workshop, you should choose the Kernel as shown below.
